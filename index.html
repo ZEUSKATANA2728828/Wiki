@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!--
+  ═══════════════════════════════════════════════════════════════
+   SLAYERS WIKI — Project Slayers (Roblox) | Primeiro Mundo
+   GitHub Pages: Faça upload de todos os arquivos no repositório
+   e ative GitHub Pages nas configurações do repo (Settings >
+   Pages > Source: Deploy from branch > main / root).
+   URL final: https://[seuuser].github.io/[repo-name]/
+  ═══════════════════════════════════════════════════════════════
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SlayersWiki — A maior wiki em português de Project Slayers no Roblox. Guia completo do Primeiro Mundo: missões, NPCs, inimigos, itens e progressão." />
+  <meta name="keywords" content="Project Slayers, Roblox, wiki, guia, primeiro mundo, World 1, missões, bosses, NPCs, respiração, progressão" />
+  <meta name="author" content="SlayersWiki Community" />
+  <meta name="robots" content="index, follow" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="SlayersWiki — Project Slayers Primeiro Mundo" />
+  <meta property="og:description" content="Wiki completa do Primeiro Mundo de Project Slayers no Roblox." />
+  <meta property="og:type" content="website" />
+  <title>SlayersWiki — Project Slayers | Primeiro Mundo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     OVERLAY SIDEBAR MOBILE
+════════════════════════════════════════ -->
+<div id="sidebar-overlay"></div>
+
+<!-- ═══════════════════════════════════════
+     SIDEBAR
+════════════════════════════════════════ -->
+<nav id="sidebar" aria-label="Navegação principal">
+  <div class="sidebar-inner">
+
+    <div class="sidebar-brand">
+      <h2>⚔ SlayersWiki</h2>
+      <p>Project Slayers · Primeiro Mundo</p>
+    </div>
+
+    <!-- Busca rápida sidebar -->
+    <div id="sidebar-search">
+      <input type="search" id="sidebar-search-input" placeholder="🔍 Filtrar seções..." aria-label="Filtrar seções" />
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Geral</div>
+      <a href="#home" class="nav-link active" data-section="home" aria-current="page">
+        <span class="nav-icon">🏠</span> Início
+      </a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Introdução</div>
+      <a href="#comecando" class="nav-link" data-section="comecando">
+        <span class="nav-icon">🌟</span> Começando no Jogo
+      </a>
+      <a href="#mapa" class="nav-link" data-section="mapa">
+        <span class="nav-icon">🗺️</span> Mapa do Primeiro Mundo
+      </a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Conteúdo</div>
+      <a href="#missoes" class="nav-link" data-section="missoes">
+        <span class="nav-icon">📜</span> Missões
+      </a>
+      <a href="#npcs" class="nav-link" data-section="npcs">
+        <span class="nav-icon">👤</span> NPCs Importantes
+      </a>
+      <a href="#progressao" class="nav-link" data-section="progressao">
+        <span class="nav-icon">⬆️</span> Progressão
+      </a>
+      <a href="#inimigos" class="nav-link" data-section="inimigos">
+        <span class="nav-icon">👹</span> Inimigos & Bosses
+      </a>
+      <a href="#itens" class="nav-link" data-section="itens">
+        <span class="nav-icon">⚔️</span> Itens & Equipamentos
+      </a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Referência</div>
+      <a href="#guia" class="nav-link" data-section="guia">
+        <span class="nav-icon">📋</span> Guia Completo
+      </a>
+      <a href="#faq" class="nav-link" data-section="faq">
+        <span class="nav-icon">❓</span> FAQ
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     HEADER
+════════════════════════════════════════ -->
+<header id="header">
+  <button class="hamburger" id="hamburger" aria-label="Abrir menu">☰</button>
+
+  <a href="#home" class="header-logo" data-nav="home">
+    <span class="logo-icon">⚔️</span>
+    <span>SlayersWiki</span>
+  </a>
+
+  <div class="search-wrapper" style="position:relative;">
+    <input type="search" id="search-input" placeholder="Buscar na wiki..." aria-label="Buscar" />
+    <button id="search-btn" aria-label="Buscar">🔍</button>
+    <div id="search-results" role="listbox" aria-label="Resultados da busca"></div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════
+     WRAPPER PRINCIPAL
+════════════════════════════════════════ -->
+<div id="main-wrapper">
+  <main id="content-area">
+
+    <!-- ════════════════════════════════
+         HOME
+    ════════════════════════════════ -->
+    <section id="section-home" class="content-section active" aria-label="Início">
+
+      <!-- HERO BANNER -->
+      <div class="hero">
+        <div class="hero-badge">Wiki Oficial da Comunidade</div>
+        <h1>Project Slayers<br/>Primeiro Mundo</h1>
+        <p>A enciclopédia mais completa em português sobre o Primeiro Mundo de Project Slayers no Roblox. Do início até o final da jornada.</p>
+        <div class="hero-btns">
+          <button class="btn btn-primary" data-nav="comecando">🌟 Começar Agora</button>
+          <button class="btn btn-secondary" data-nav="guia">📋 Guia Completo</button>
+        </div>
+      </div>
+
+      <!-- CARDS DE NAVEGAÇÃO -->
+      <h2>Explore a Wiki</h2>
+      <p class="section-subtitle">Navegue pelas seções principais ou use a busca para encontrar algo específico.</p>
+
+      <div class="cards-grid">
+        <div class="card" style="cursor:pointer" data-nav="comecando" onclick="navigateTo('comecando')">
+          <span class="card-icon">🌟</span>
+          <div class="card-title">Começando no Jogo</div>
+          <div class="card-desc">Criação de personagem, primeiros passos e dicas para novos jogadores.</div>
+          <span class="card-link">Ver guia →</span>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="navigateTo('mapa')">
+          <span class="card-icon">🗺️</span>
+          <div class="card-title">Mapa do Mundo 1</div>
+          <div class="card-desc">Todas as regiões, cidades, locais de farm e pontos importantes.</div>
+          <span class="card-link">Explorar →</span>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="navigateTo('missoes')">
+          <span class="card-icon">📜</span>
+          <div class="card-title">Missões</div>
+          <div class="card-desc">Lista completa de missões com objetivos, recompensas e dicas.</div>
+          <span class="card-link">Ver missões →</span>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="navigateTo('npcs')">
+          <span class="card-icon">👤</span>
+          <div class="card-title">NPCs</div>
+          <div class="card-desc">Todos os personagens importantes, suas funções e localizações.</div>
+          <span class="card-link">Ver NPCs →</span>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="navigateTo('progressao')">
+          <span class="card-icon">⬆️</span>
+          <div class="card-title">Progressão</div>
+          <div class="card-desc">Sistema de combate, ganho de XP, respirações e evolução.</div>
+          <span class="card-link">Evoluir →</span>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="navigateTo('inimigos')">
+          <span class="card-icon">👹</span>
+          <div class="card-title">Inimigos & Bosses</div>
+          <div class="card-desc">Todos os inimigos e bosses do Mundo 1 com estratégias de derrota.</div>
+          <span class="card-link">Ver inimigos →</span>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="navigateTo('itens')">
+          <span class="card-icon">⚔️</span>
+          <div class="card-title">Itens & Equipamentos</div>
+          <div class="card-desc">Espadas, roupas, itens de cura e drops importantes do mundo.</div>
+          <span class="card-link">Ver itens →</span>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="navigateTo('guia')">
+          <span class="card-icon">📋</span>
+          <div class="card-title">Guia Início ao Fim</div>
+          <div class="card-desc">O caminho ideal de progressão para finalizar o Primeiro Mundo.</div>
+          <span class="card-link">Ler guia →</span>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- SOBRE O JOGO -->
+      <h2>Sobre Project Slayers</h2>
+      <p style="color:var(--text-secondary); margin-bottom:1rem;">Project Slayers é um jogo do Roblox inspirado no anime <strong style="color:var(--blue-neon)">Demon Slayer: Kimetsu no Yaiba</strong>. Os jogadores embarcam em uma jornada épica como caçadores de demônios (Demon Slayers) ou se tornam demônios, desenvolvendo habilidades únicas de combate chamadas <span class="hl">Respirações</span> ou <span class="hl-purple">Artes de Sangue</span>.</p>
+
+      <div class="cards-grid-2">
+        <div class="info-box">
+          <strong>🎮 Plataforma:</strong> Roblox<br/>
+          <strong>🎭 Gênero:</strong> RPG de ação inspirado em anime<br/>
+          <strong>🌍 Foco desta Wiki:</strong> Exclusivamente Primeiro Mundo (World 1)
+        </div>
+        <div class="tip-box">
+          <strong>💡 Dica para novatos:</strong> O Primeiro Mundo é toda a experiência inicial do jogo. Ele cobre desde a criação do personagem até você estar pronto para avançar. Esta wiki cobre <em>tudo</em> que acontece aqui.
+        </div>
+      </div>
+
+      <!-- RESUMO DA JORNADA -->
+      <h2>A Jornada no Primeiro Mundo</h2>
+      <p style="color:var(--text-secondary); margin-bottom:1.5rem;">A progressão no Primeiro Mundo segue uma ordem clara que você deve seguir para uma experiência mais tranquila:</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>Criação e Despertar</h4>
+            <p>Crie seu personagem, desperte em Kiribating Village e aprenda os controles básicos.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>Treinamento Inicial</h4>
+            <p>Complete missões dos NPCs iniciais, faça farm de XP e suba seus primeiros níveis.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>Seleção Final</h4>
+            <p>Enfrente a Final Selection na Montanha Fujikasane e torne-se oficialmente um Demon Slayer.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>Escolha da Respiração</h4>
+            <p>Aprenda sua forma de respiração com os mestres localizados pelo mapa.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>Derrotar os Bosses</h4>
+            <p>Enfrente Rui na Montanha das Aranhas e outros bosses do Mundo 1.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>Conclusão do Mundo 1</h4>
+            <p>Complete o arco principal e esteja pronto para avançar na aventura.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ════════════════════════════════
+         COMEÇANDO NO JOGO
+    ════════════════════════════════ -->
+    <section id="section-comecando" class="content-section" aria-label="Começando no jogo">
+
+      <div class="section-title">Começando no Jogo</div>
+      <p class="section-subtitle">Tudo que um novo jogador precisa saber para iniciar bem sua jornada.</p>
+
+      <h2>🎨 Criação de Personagem</h2>
+      <p style="color:var(--text-secondary); margin-bottom:1rem;">Ao entrar em Project Slayers pela primeira vez, você será levado à tela de criação de personagem. Suas escolhas aqui afetam apenas a aparência — <span class="hl">o desempenho é igual para todos os personagens</span>.</p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <span class="card-icon">👤</span>
+          <div class="card-title">Aparência</div>
+          <div class="card-desc">Escolha rosto, cor de cabelo, cor de pele e outros atributos visuais. Purely cosmético — não afeta gameplay.</div>
+        </div>
+        <div class="card">
+          <span class="card-icon">🎲</span>
+          <div class="card-title">Rosto (Face)</div>
+          <div class="card-desc">Existem múltiplos rostos disponíveis. Alguns rostos raros são obtidos via spin ou Robux. O rosto padrão é completamente válido.</div>
+        </div>
+        <div class="card">
+          <span class="card-icon">✨</span>
+          <div class="card-title">Trajes Iniciais</div>
+          <div class="card-desc">Você começa com roupas simples. Em breve poderá equipar uniformes de Demon Slayer ou outras vestes especiais.</div>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <strong>💡 Dica:</strong> Não se preocupe demais com a aparência no início. Você pode ajustá-la depois e o que realmente importa é a sua Build e Respiração escolhida.
+      </div>
+
+      <h2>🗺️ Spawn Inicial — Kiribating Village</h2>
+      <p style="color:var(--text-secondary); margin-bottom:1rem;">Você começa sua jornada em <span class="hl">Kiribating Village</span>, uma aldeia tranquila que serve como ponto de partida. Explore a área para se familiarizar com o ambiente.</p>
+
+      <table class="wiki-table">
+        <thead>
+          <tr>
+            <th>Local</th>
+            <th>Descrição</th>
+            <th>O que fazer lá</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Centro da Aldeia</td>
+            <td>Praça principal de Kiribating</td>
+            <td>Encontrar NPCs de missões iniciais</td>
+          </tr>
+          <tr>
+            <td>Loja do Ferreiro</td>
+            <td>Onde comprar e vender itens</td>
+            <td>Comprar sua primeira espada</td>
+          </tr>
+          <tr>
+            <td>Casa do Ancião</td>
+            <td>Residência do líder da aldeia</td>
+            <td>Receber a primeira missão principal</td>
+          </tr>
+          <tr>
+            <td>Floresta ao Redor</td>
+            <td>Área de farm próxima ao spawn</td>
+            <td>Farmar Crows e inimigos fracos</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>🕹️ Interface do Jogador</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <span class="card-icon">❤️</span>
+          <div class="card-title">Barra de Vida (HP)</div>
+          <div class="card-desc">Sua saúde atual. Quando chega a zero, você respawna. Recupera gradualmente ou com itens de cura.</div>
+        </div>
+        <div class="card">
+          <span class="card-icon">💨</span>
+          <div class="card-title">Barra de Stamina</div>
+          <div class="card-desc">Usada para ataques, bloqueios e corrida. Recupera quando você descansa. Gerencie bem em combates longos.</div>
+        </div>
+        <div class="card">
+          <span class="card-icon">⭐</span>
+          <div class="card-title">Barra de XP</div>
+          <div class="card-desc">Acumule experiência derrotando inimigos e completando missões para subir de nível.</div>
+        </div>
+        <div class="card">
+          <span class="card-icon">💰</span>
+          <div class="card-title">Wen (Moeda)</div>
+          <div class="card-desc">Moeda principal do jogo. Obtida em missões e drops. Usada para comprar itens e treinar habilidades.</div>
+        </div>
+        <div class="card">
+          <span class="card-icon">🎒</span>
+          <div class="card-title">Inventário</div>
+          <div class="card-desc">Acesse com a tecla correspondente. Gerencie seus itens, equipamentos e consumíveis.</div>
+        </div>
+        <div class="card">
+          <span class="card-icon">📊</span>
+          <div class="card-title">Stats / Atributos</div>
+          <div class="card-desc">Ao subir de nível você ganha pontos para distribuir em STR, DEF, AGI e outros atributos.</div>
+        </div>
+      </div>
+
+      <h2>⌨️ Controles Básicos</h2>
+      <table class="wiki-table">
+        <thead>
+          <tr><th>Ação</th><th>PC (Teclado)</th><th>Mobile</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Mover</td><td>WASD / Setas</td><td>Joystick na tela</td></tr>
+          <tr><td>Pular</td><td>Espaço</td><td>Botão de pulo</td></tr>
+          <tr><td>Atacar (M1)</td><td>Clique esquerdo</td><td>Botão de ataque</td></tr>
+          <tr><td>Bloquear</td><td>F</td><td>Botão de bloqueio</td></tr>
+          <tr><td>Correr</td><td>Shift</td><td>Dois dedos no joystick</td></tr>
+          <tr><td>Habilidade 1</td><td>Z</td><td>Botão Z</td></tr>
+          <tr><td>Habilidade 2</td><td>X</td><td>Botão X</td></tr>
+          <tr><td>Habilidade 3</td><td>C</td><td>Botão C</td></tr>
+          <tr><td>Habilidade 4</td><td>V</td><td>Botão V</td></tr>
+          <tr><td>Inventário</td><td>G ou Tab</td><td>Botão de mochila</td></tr>
+          <tr><td>Mapa</td><td>M</td><td>Ícone de mapa</td></tr>
+        </tbody>
+      </table>
+
+      <h2>💡 Dicas para Iniciantes</h2>
+      <div class="cards-grid-2">
+        <div class="tip-box">
+          <strong>✅ Sempre complete missões</strong><br/>
+          Missões são a melhor fonte de XP e Wen no início. Priorize-as antes de fazer farm livre.
+        </div>
+        <div class="tip-box">
+          <strong>✅ Bloqueie ataques dos inimigos</strong><br/>
+          Segurar F no momento certo reduz muito o dano recebido. Pratique o timing para sobreviver mais.
+        </div>
+        <div class="info-box">
+          <strong>ℹ️ Escolha certa de atributos</strong><br/>
+          Para iniciantes, invista primeiro em STR (força) para matar inimigos mais rápido e DEF (defesa) para aguentar mais dano.
+        </div>
+        <div class="warn-box">
+          <strong>⚠️ Não gaste Wen à toa</strong><br/>
+          Evite comprar itens cosméticos no início. Guarde sua moeda para treinar habilidades e comprar equipamentos melhores.
+        </div>
+        <div class="tip-box">
+          <strong>✅ Compre itens de cura</strong><br/>
+          Sempre tenha Wisteria Medicine ou Total Concentration Medicine no inventário antes de enfrentar bosses.
+        </div>
+        <div class="info-box">
+          <strong>ℹ️ Server hop se necessário</strong><br/>
+          Se um boss já foi derrotado no seu servidor, você pode ir para outro servidor para encontrá-lo disponível.
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ════════════════════════════════
+         MAPA DO PRIMEIRO MUNDO
+    ════════════════════════════════ -->
+    <section id="section-mapa" class="content-section" aria-label="Mapa do Primeiro Mundo">
+
+      <div class="section-title">Mapa do Primeiro Mundo</div>
+      <p class="section-subtitle">Conheça todas as regiões, cidades e locais importantes do Mundo 1.</p>
+
+      <div class="info-box">
+        <strong>📍 Orientação:</strong> O Primeiro Mundo é um mapa extenso com diversas regiões conectadas. Cada região tem seu próprio nível de dificuldade e tipos de inimigos. Explore gradualmente conforme sobe de nível.
+      </div>
+
+      <h2>🏘️ Cidades e Vilas</h2>
+
+      <div class="cards-grid-2">
+        <div class="card">
+          <span class="card-icon">🏡</span>
+          <div class="card-title">Kiribating Village <span class="badge badge-green" style="margin-left:.5rem">Spawn</span></div>
+          <div class="card-desc">Aldeia inicial onde todos os jogadores começam. Ponto central de missões iniciais, loja básica e NPCs tutoriais. Área segura com inimigos fracos ao redor. Nível recomendado: 1-15.</
